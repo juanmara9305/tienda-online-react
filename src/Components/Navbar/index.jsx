@@ -1,6 +1,9 @@
 import { NavLink } from "react-router-dom"
+import { ShoppingCartContex } from "../../Context";
+import { useContext } from "react";
 
 export default function index() {
+    const context = useContext(ShoppingCartContex);
     const activeStyle = 'underline underline-offset-4';
     
     return (
@@ -106,7 +109,7 @@ export default function index() {
                 className={({isActive}) =>
                     isActive ? activeStyle: undefined
                 }>
-                    Carrito
+                    Carrito {context.count}
                 </NavLink>   
             </li>            
         </ul>
