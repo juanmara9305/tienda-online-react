@@ -1,9 +1,13 @@
-export default function index() {
+export default function index(data) {
+
   return (
     <div className="bg-white cursor-pointer w-56 h-60 rounded-lg">
         <figure className="relative mb-2 w-full h-4/5">
-            <span className="absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5">Electronics</span>
-            <img src="https://images.pexels.com/photos/1649771/pexels-photo-1649771.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+            <span className="absolute bottom-0 left-0 bg-white/60 rounded-lg text-black text-xs m-2 px-3 py-0.5"
+            >
+                {data.data.category.name}
+            </span>
+            <img src={data.data.images[0]} 
                 alt="headphones"
                 className="w-full h-full object-cover rounded-lg" 
             />
@@ -12,8 +16,8 @@ export default function index() {
             </div>
         </figure>
         <p className="flex justify-between">
-            <samp className="text-sm font-light">Headphones</samp>
-            <span className="text-lg font-medium">$300</span>
+            <samp className="text-sm font-light">{data.data.title}</samp>
+            <span className="text-lg font-medium">${data.data.price}</span>
         </p>
     </div>
   )
