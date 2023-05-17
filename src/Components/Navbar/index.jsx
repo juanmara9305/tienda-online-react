@@ -2,7 +2,7 @@ import { NavLink } from "react-router-dom"
 import { ShoppingCartContex } from "../../Context";
 import { useContext } from "react";
 
-export default function index() {
+const Navbar = () => {
     const context = useContext(ShoppingCartContex);
     const activeStyle = 'underline underline-offset-4';
     
@@ -117,3 +117,5 @@ export default function index() {
 
   )
 }
+
+export default Navbar

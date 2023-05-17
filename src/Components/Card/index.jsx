@@ -1,7 +1,7 @@
 import { useContext } from "react"
-import { ShoppingCartContex } from "../../Context";
+import { ShoppingCartContex } from "../../Context"
 
-export default function index(data) {
+const  Card = (data) => {
 
   const context = useContext(ShoppingCartContex);
     
@@ -30,3 +30,5 @@ export default function index(data) {
     </div>
   )
 }
+
+export default Card
